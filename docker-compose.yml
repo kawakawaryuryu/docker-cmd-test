@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  cmd-json-format:
+    container_name: cmd-json-format
+    image: ubuntu:22.04
+    command:
+      - sleep
+      - infinity
+  cmd-shell-format:
+    container_name: cmd-shell-format
+    image: ubuntu:22.04
+    command: sleep infinity
+  cmd-json-format-with-sh:
+    container_name: cmd-json-format-with-sh
+    image: ubuntu:22.04
+    command:
+      - /bin/sh
+      - -c
+      - sleep infinity
+  cmd-json-format-with-sh-exec:
+    container_name: cmd-json-format-with-sh-exec
+    image: ubuntu:22.04
+    command:
+      - /bin/sh
+      - -c
+      - exec sleep infinity
